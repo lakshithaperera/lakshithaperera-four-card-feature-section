@@ -1,0 +1,149 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: hsl(0, 0%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.container{
+    width: 75%;
+    
+}
+
+.header{
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2{
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    font-size: 34px;
+}
+.strong{
+    font-weight: 600;
+}
+
+p{
+
+    Font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    margin-top: 10px;
+}
+
+.boxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.box{
+    padding: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 150px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s all ease-in;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+}
+.left::before{
+    background: hsl(180, 62%, 55%);
+}
+.top::before{
+    background: hsl(0, 78%, 62%);
+}
+
+.bottom::before{
+    background: hsl(34, 97%, 64%);
+}
+
+.right::before{
+    background: hsl(212, 86%, 64%);
+}
+
+.box:hover{
+    scale: .95;
+}
+
+.box svg{
+   float: right;
+   margin: 10px 0;
+   padding: 0;
+   
+}
+.box p{
+    font-size: 11px;
+    margin-top: 15px;
+    line-height: 20px;
+    color: hsl(229, 6%, 66%);
+}
+.box h3{
+    color: hsl(234, 12%, 34%);
+    font-size: 17px;
+}
+.middle{
+    display: grid;
+    gap: 30px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    
+}
+footer a{
+    text-decoration: none;
+    color: brown;
+    padding: 20px;
+}
+
+@media (max-width: 850px) {
+    .boxs{
+        grid-template-columns: none;
+    }
+    .header h2{
+        font-size: 24px;
+    }
+    .header p{
+        font-size: 13px;
+    }
+   
+}
+
+@media (max-width: 500px) {
+    .header h2{
+       font-size: 18px;
+    }
+    .header p{
+        font-size: 11px;
+    }
+    .box h3{
+        font-size: 15px;
+    }
+   
+}
+
+
